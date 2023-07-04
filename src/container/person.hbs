@@ -1,0 +1,91 @@
+{{#with person}}
+<h2>Person:</h2>
+<div>{{name}}</div>
+<div>{{age}}</div>
+<div>{{gender}}</div>
+<hr>
+<br>
+<h4>Address:</h4>
+{{#each address}}
+<p>{{this}}</p>
+{{/each}}
+<hr>
+<br>
+<h4>Education:</h4>
+{{#each education}}
+<p>{{degree}}</p>
+<p>{{major}}</p>
+<p>{{university}}</p>
+<p>{{graduationYear}}</p>
+{{/each}}
+<hr>
+<br>
+<h4>Work Experience:</h4>
+{{#each workExperience}}
+<p>{{company}}</p>
+<p>{{title}}</p>
+<p>{{startDate}}</p>
+<p>{{endDate}}</p>
+<p>{{responsibilities}}</p>
+<p>{{year_founded}}</p>
+<p>{{industry}}</p>
+<hr>
+<br>
+<h4>Employees:</h4>
+{{#each employees}}
+<p>{{name}}</p>
+<p>{{position}}</p>
+<p>{{department}}</p>
+<hr>
+<br>
+<h4>Projects:</h4>
+{{#each projects}}
+<p>{{name}}</p>
+<p>{{description}}</p>
+<hr>
+<br>
+<h4>Teams:</h4>
+{{#each teams}}
+<p>{{team_name}}</p>
+<hr>
+<br>
+<h4>Team leader:</h4>
+{{#with team_leader}}
+<p>{{name}}</p>
+<p>{{title}}</p>
+<p>{{email}}</p>
+{{/with}}
+<hr>
+<br>
+<h4>Team members:</h4>
+{{#each team_members}}
+{{#with this}}
+<p>{{name}}</p>
+<p>{{title}}</p>
+<p>{{email}}</p>
+<hr>
+<br>
+<h4>Skills:</h4>
+<p>{{skills}}</p>
+<hr>
+<br>
+<h4>Projects:</h4>
+{{#each projects}}
+<p>{{name}}</p>
+<p>{{description}}</p>
+<p>{{technologies}}</p>
+<hr>
+<br>
+<h4>Team members:</h4>
+{{#each team_members}}
+<p>{{name}}</p>
+<p>{{title}}</p>
+{{/each}}
+{{/each}}
+{{/with}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/with}}
