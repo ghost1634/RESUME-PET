@@ -1,0 +1,92 @@
+<h2>Excursion:</h2>
+<br>
+{{#with program.excursion}}
+<p>{{name}}</p>
+{{#with location}}
+<p>{{city}}</p>
+<p>{{country}}</p>
+{{/with}}
+{{/with}}
+<p>{{program.excursion.date}}</p>
+<hr>
+<br>
+<h3>Program:</h3>
+{{# with program.excursion}}
+{{#each program}}
+<p>{{name}}</p>
+<p>{{type}}</p>
+<p>{{duration}}</p>
+{{/each}}
+{{/with}}
+<hr>
+<br>
+<h3>Details:</h3>
+{{# with program.excursion}}
+{{#each program}}
+{{details.museum.name}}
+{{#with details.museum.location}}
+<p>{{address}}</p>
+<p>{{city}}</p>
+<p>{{country}}</p>
+{{/with}}
+{{/each}}
+{{/with}}
+<br>
+{{# with program.excursion}}
+{{#each program}}
+{{details.venue.name}}
+{{#with details.venue.location}}
+<p>{{address}}</p>
+<p>{{city}}</p>
+<p>{{country}}</p>
+{{/with}}
+{{/each}}
+{{/with}}
+<hr>
+<br>
+<h3>Exhibits:</h3>
+{{# with program.excursion}}
+{{#each program}}
+{{#with details.museum}}
+{{#each exhibits}}
+<ul>
+    <li>
+        <p>{{name}}</p>
+        <p>{{artist}}</p>
+        <p>{{description}}</p>
+        <p>{{audio_guide}}</p>
+    </li>
+</ul>
+{{/each}}
+{{/with}}
+{{/each}}
+{{/with}}
+<hr>
+<br>
+<h3>Guide:</h3>
+{{#with program.excursion}}
+{{#each program}}
+{{#with details.guide}}
+<ul>
+    <li>
+        <p>{{name}}</p>
+        <p>{{language}}</p>
+        <p>{{rating}}</p>
+    </li>
+</ul>
+{{/with}}
+{{/each}}
+{{/with}}
+<hr>
+<br>
+<h3>Performers:</h3>
+{{#with program.excursion}}
+{{#each program}}
+{{#with details}}
+{{#each performers}}
+<p>{{name}}</p>
+<p>{{type}}</p>
+{{/each}}
+{{/with}}
+{{/each}}
+{{/with}}
