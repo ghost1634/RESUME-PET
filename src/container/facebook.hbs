@@ -1,0 +1,52 @@
+<h2>
+    <p>{{name}}</p>
+</h2>
+<hr>
+<br>
+<h3>Users:</h3>
+{{#each users}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{gender}}</p>
+<p>{{age}}</p>
+{{#each friends}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{gender}}</p>
+<p>{{age}}</p>
+{{#each mutual_friends}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{gender}}</p>
+<p>{{age}}</p>
+{{#each mutual_friends}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{gender}}</p>
+<p>{{age}}</p>
+{{/each}}
+{{/each}}
+{{#each groups}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{description}}</p>
+{{#each members}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{gender}}</p>
+<p>{{age}}</p>
+{{/each}}
+{{/each}}
+{{/each}}
+{{#each groups}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{description}}</p>
+{{#each members}}
+<p>{{id}}</p>
+<p>{{name}}</p>
+<p>{{gender}}</p>
+<p>{{age}}</p>
+{{/each}}
+{{/each}}
+{{/each}}
