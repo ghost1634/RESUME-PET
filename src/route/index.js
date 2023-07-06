@@ -12,7 +12,6 @@ var header = {
   salary: '600$ в місяць',
   address: 'м. Київ, вул. Предславенська, 126/49',
 }
-
 var footer = {
   social: {
     email: {
@@ -29,16 +28,12 @@ var footer = {
     },
   },
 }
-// ================================================================
-
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {
       title: 'Resume | Summary',
     },
-
     header,
-
     main: {
       summary: {
         title: 'Summary',
@@ -46,7 +41,6 @@ router.get('/summary', function (req, res) {
     to work on a new project I learn the domain and try to understand the idea of the project. Good team
     player, every colleague is a friend to me.`,
       },
-
       experience: {
         title: 'Other experience',
         text: `Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
@@ -54,19 +48,15 @@ router.get('/summary', function (req, res) {
       for such events like: money line - first win / draw / second win, totals etc.`,
       },
     },
-
     footer,
   })
 })
-
 router.get('/skills', function (req, res) {
   res.render('skills', {
     page: {
       title: 'Resume | Skills',
     },
-
     header,
-
     main: {
       skills: [
         { name: 'HTML', point: 4, isTop: true },
@@ -84,17 +74,14 @@ router.get('/skills', function (req, res) {
         { name: 'Садівництво', isMain: false },
       ],
     },
-
     footer,
   })
 })
-
 router.get('/education', function (req, res) {
   res.render('education', {
     page: {
       title: 'Resume | Education',
     },
-
     header,
     main: {
       educations: [
@@ -134,14 +121,12 @@ router.get('/education', function (req, res) {
     footer,
   })
 })
-
 router.get('/work', function (req, res) {
   res.render('work', {
     layout: 'big',
     page: {
       title: 'Resume | Work',
     },
-
     header,
     main: {
       works: [
@@ -188,11 +173,9 @@ router.get('/work', function (req, res) {
         },
       ],
     },
-
     footer,
   })
 })
-
 router.get('/person', function (req, res) {
   res.render('person', {
     layout: 'basic',
@@ -592,7 +575,7 @@ router.get('/web', function (req, res) {
 })
 router.get('/js', function (req, res) {
   res.render('js', {
-    layout: 'js',
+    layout: 'basic',
     name: 'JavaScript',
     description:
       'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
@@ -663,6 +646,98 @@ router.get('/js', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 module.exports = router
+router.get('/car', function (req, res) {
+  res.render('car', {
+    layout: 'basic',
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+})
