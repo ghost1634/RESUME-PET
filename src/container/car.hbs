@@ -1,0 +1,128 @@
+<h2>CAR</h2>
+<p>{{make}}</p>
+<p>{{model}}</p>
+<p>{{year}}</p>
+<p>{{color}}</p>
+<hr>
+<br>
+<h2>Seats:</h2>
+{{#with features.interior.seats}}
+<p>{{material}}</p>
+<p>{{color}}</p>
+<p>{{heated}}</p>
+<p>{{ventilated}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Dashboard:</h2>
+{{#with features.interior.dashboard}}
+<p>{{material}}</p>
+<p>{{color}}</p>
+<hr>
+<br>
+<h2>Display:</h2>
+{{#with display}}
+<p>{{type}}</p>
+<p>{{size}}</p>
+<p>{{resolution}}</p>
+<p>{{touchscreen}}</p>
+{{/with}}
+{{/with}}
+<hr>
+<br>
+<h2>Audio:</h2>
+{{#with features.interior.audio}}
+<p>{{system}}</p>
+<p>{{speakers}}</p>
+<p>{{subwoofer}}</p>
+<p>{{bluetooth}}</p>
+<p>{{USB}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Wheels:</h2>
+{{#with features.exterior.wheels}}
+<p>{{size}}</p>
+<p>{{type}}</p>
+<p>{{color}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Headlights:</h2>
+{{#with features.exterior.headlights}}
+<p>{{type}}</p>
+<p>{{brightness}}</p>
+<p>{{automatic}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Sunroof:</h2>
+{{#with features.exterior.sunroof}}
+<p>{{type}}</p>
+<p>{{size}}</p>
+<p>{{automatic}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Airbags:</h2>
+{{#with features.safety.airbags}}
+<p>{{front}}</p>
+<p>{{side}}</p>
+<p>{{knee}}</p>
+<p>{{rear}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Assistance:</h2>
+{{#with features.safety.assistance}}
+<p>{{blind_spot_monitoring}}</p>
+<p>{{rear_cross_traffic_alert}}</p>
+<p>{{lane_departure_warning}}</p>
+<p>{{adaptive_cruise_control}}</p>
+<p>{{collision_warning}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Engine:</h2>
+{{#with engine}}
+<p>{{type}}</p>
+<p>{{displacement}}</p>
+<p>{{horsepower}}</p>
+<p>{{torque}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Transmission:</h2>
+{{#with engine.transmission}}
+<p>{{type}}</p>
+<p>{{gears}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Fuel economy:</h2>
+{{#with fuel_economy}}
+<p>{{city}}</p>
+<p>{{highway}}</p>
+<p>{{combined}}</p>
+{{/with}}
+<hr>
+<br>
+<h2>Price:</h2>
+{{#with price}}
+<p>{{base}}</p>
+<p>{{destination}}</p>
+<hr>
+<br>
+<h2>Options:</h2>
+{{#with options}}
+<li>{{navigation}}</li>
+<br>
+<li>{{moonroof}}</li>
+<br>
+<li>{{premium_paint}}</li>
+<br>
+{{/with}}
+{{/with}}
+<hr>
+<br>
+<b>Total: </b></h3><b><i>{{price.total}}</i></b>
