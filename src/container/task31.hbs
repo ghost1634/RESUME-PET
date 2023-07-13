@@ -160,27 +160,23 @@
 
 
 {{#with footer}}
-<table class="table table-borderless">
-    <thead>
-    <tbody>
-        <h5 class="table-title">{{title}}</h5>
+<h5 class="table-title">{{title}}</h5>
+<ul class="list-group list-group-horizontal">
+    <ul class="list-group">
         {{#each navigation}}
-        <tr>
-            <td scope="col 1"><a href="{{href}}" class="btn btn-link">{{text}}</a></td>
-        </tr>
+        <li class="list-group-item"><a href="{{href}}" class="btn btn-link">{{text}}</a></li>
         {{/each}}
+    </ul>
+    <ul class="list-group">
         {{#each socialMedia}}
-        <tr>
-            <td scope="col 2"><a href="{{link}}" class="btn btn-outline-dark">{{name}}</a></td>
-        </tr>
+        <li class="list-group-item"><a href="{{link}}" class="btn btn-outline-dark">{{name}}</a></li>
         {{/each}}
+    </ul>
+    <ul class="list-group">
         {{#each partners}}
-        <tr>
-            <td scope="col 3"><a href="{{link}}" class="btn btn-outline-info">{{name}}</a></td>
-        </tr>
+        <li class="list-group-item"><a href="{{link}}" class="btn btn-outline-info">{{name}}</a></li>
         {{/each}}
-    </tbody>
-    </thead>
-</table>
+    </ul>
+</ul>
 {{/with}}
 <br>
