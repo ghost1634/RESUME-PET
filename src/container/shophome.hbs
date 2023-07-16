@@ -1,0 +1,26 @@
+<main>
+    <div class="card">
+        <div class="nav">
+            {{#each navigation.links}}
+            <div class="nav-item"></div>
+            <a href="{{href}}" class="nav-link">{{text}}</a>
+            {{/each}}
+        </div>
+    </div>
+</main>
+<br>
+<br>
+
+<h2 class="title text-center">{{newsBlock.title}}</h2>
+<br>
+<div class="row g-1">
+    {{#each newsBlock.cards}}
+    <div class="alert alert-dark text-white col-3" role="alert">
+        {{#if isTop}} <span class="badge text-bg-danger">ТОП</span>
+        {{/if}}
+        {{#if isNew}} <span class="badge text-bg-success">НОВА</span>
+        {{/if}}
+        <h6>{{title}}</h6> {{description}}
+    </div>
+    {{/each}}
+</div>
