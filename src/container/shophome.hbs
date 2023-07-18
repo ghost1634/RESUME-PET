@@ -31,12 +31,12 @@
 <nav class="nav nav-tabs">
   {{#each goodsBlock.tabs}}
   <li class="nav-item">
-    {{#if isActive}}
+    {{#unless isDisabled}}
     <a class="nav-link active" aria-current="page" href="{{image}}">{{text}}</a>
   </li>
   {{else}}
   <a class="nav-link disabled" aria-current="page" href="{{image}}">{{text}}</a>
-  {{/if}}
+  {{/unless}}
   {{/each}}
 </nav>
 <br>
