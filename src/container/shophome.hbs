@@ -10,7 +10,6 @@
 </main>
 <br>
 <br>
-
 <h2 class="title text-center">{{newsBlock.title}}</h2>
 <br>
 <div class="row g-1">
@@ -27,22 +26,24 @@
 <br>
 <hr>
 <br>
-
 <nav class="nav nav-tabs">
   {{#each goodsBlock.tabs}}
   <li class="nav-item">
-    {{#unless isDisabled}}
+    {{#if isActive}}
     <a class="nav-link active" aria-current="page" href="{{image}}">{{text}}</a>
-  </li>
   {{else}}
+  {{#if isDisabled}}
   <a class="nav-link disabled" aria-current="page" href="{{image}}">{{text}}</a>
-  {{/unless}}
+  {{else}}
+  <a class="nav-link" aria-current="page" href="{{image}}">{{text}}</a>
+  {{/if}}
+  {{/if}}
+   </li>
   {{/each}}
 </nav>
 <br>
 <hr>
 <br>
-
 {{#with goodsBlock}}
 <div class="row g-4">
   {{#each cards}}
@@ -65,8 +66,6 @@
 <br>
 <hr>
 <br>
-
-
 <div class="alert alert-dark text-white" role="alert">
   {{#with subscribe}}
   <h2 class="title">{{header}}</h2>
@@ -78,7 +77,6 @@
 </div>
 <br>
 <hr>
-
 <div class="alert alert-success text-white text-center" role="alert">
   {{#with service}}
   <h2 class="title">{{title}}</h2>
@@ -90,10 +88,6 @@
 </div>
 <br>
 <hr>
-
-
-
-
 <div class="nav">
   {{#each footer}}
   {{#each this}}
