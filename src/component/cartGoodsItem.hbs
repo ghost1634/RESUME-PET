@@ -1,0 +1,25 @@
+{{#each goodsBlock}}
+ <div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-2">
+      <img src="{{image}}">
+       </div>
+       <div class="col-md-4">
+       <div class="card-body">
+           <h5 class="card-title">{{name}}</h5>
+            <div class="card-text">{{description}}</div>
+
+
+</div>
+</div>
+ <div class="col-md-2">
+       <div class="card-body">
+           {{#with price}}
+           {{title}}
+           <h5>{{value}}</h5>
+           {{/with}}
+</div>
+</div>
+</div>
+</div>
+{{/each}}
