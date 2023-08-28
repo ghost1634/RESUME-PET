@@ -1,0 +1,73 @@
+{{#with navigation}}
+<div class="card">
+    <div class="nav">
+{{#each links}}
+  <div class="nav-item"></div>
+      <a href="{{href}}" class="nav-link">{{text}}</a>
+{{/each}}
+    </div>
+    </div>
+    <br><br>
+{{/with}}
+{{#with header}}
+ <h1 title="title">{{title}}</h1>
+ <br>
+ {{#with button}}
+<a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+{{/with}}
+{{/with}}
+<br><br><hr>
+{{> cartGoodsItem}}
+<br><hr><br>
+{{#with total}}
+<h4 title="title">{{title}}</h4>
+<h2 title="title">{{amount}}</h2>
+<p class="text-muted"><font size="-1">{{delivery}}</font></p>
+{{#each buttons}}
+{{#if isSuccess}}
+  <p><a href="{{link}}" class="btn btn-success">{{text}}</a></p>
+{{else}}
+<p><a href="{{link}}" class="btn btn-outline-success">{{text}}</a></p>
+{{/if}}
+{{/each}}
+{{/with}}
+<br><hr><br>
+{{#with goodsOtherBlock}}
+<h2 title="title" class="text-center">{{title}}</h2>
+<div class="row g-4">
+  {{#each cards}}
+  <div class="card col-4">
+    <div class="card-body">
+      <p><img src="{{image}}" class="card-img-top"></p>
+      <h6 class="card-title">{{title}}
+        {{#if isHot}} <p class="badge text-bg-warning">HOT!</span>
+          {{/if}}
+          {{#if idNew}}
+        <p class="badge text-bg-primary">Нове!</span>
+          {{/if}}
+      </h6>
+      <p class="card-text">{{description}}</p>
+    </div>
+  </div>
+  {{/each}}
+{{/with}}
+<br><hr><br>
+<div class="alert alert-dark text-white" role="alert">
+  {{#with subscribe}}
+  <h2 class="title">{{header}}</h2>
+  <p>{{description}}</p>
+  {{#each buttons}}
+  <p><a href="{{link}}" class="btn btn-primary">{{text}}</a></p>
+  {{/each}}
+  {{/with}}
+</div>
+<br><hr><br>
+<div class="nav">
+  {{#each footer}}
+  {{#each this}}
+  <div class="nav-item col-2 mx-2">
+    <div class="nav-link"><a href="{{link}}" class="btn-link">{{text}}</a></div>
+ </div>
+  {{/each}}
+  {{/each}}
+</div>
