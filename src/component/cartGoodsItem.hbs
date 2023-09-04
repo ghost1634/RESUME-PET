@@ -8,18 +8,28 @@
        <div class="card-body">
            <h5 class="card-title">{{name}}</h5>
             <div class="card-text">{{description}}</div>
-
-
 </div>
 </div>
- <div class="col-md-2">
+ <div class="col-md-4">
        <div class="card-body">
            {{#with price}}
            {{title}}
            <h5>{{value}}</h5>
            {{/with}}
+           </div>
 </div>
-</div>
+           <div class="col-md-2 ">
+            <div class="card-body">
+           {{#each buttons}}
+           {{#if isPrimary}}
+<p class="btn btn-primary">{{text}}</p>
+           {{/if}}
+           {{#if isDanger}}
+<p class="btn btn-outline-danger">{{text}}</p>
+           {{/if}}
+           {{/each}}
+           </div>
+           </div>
 </div>
 </div>
 {{/each}}
