@@ -1,0 +1,41 @@
+<div class="card col-12">
+  <div class="card-body">
+<div class="card col-12">
+  <div class="card-body">
+    <h6 class="card-title">{{reviewList.[1].title.userName}}</h6>
+{{reviewList.[1].title.caption}}
+<p>{{reviewList.[1].title.date}}</p>
+  </div>
+</div>
+<div class="card col-12">
+  <div class="card-body">
+{{reviewList.[1].reviewBody.seller.title}}:
+{{reviewList.[1].reviewBody.seller.value}}
+<br><br>
+{{reviewList.[1].reviewBody.rating.title}}:
+{{reviewList.[1].reviewBody.rating.value}}
+<br><br>
+ {{reviewList.[1].reviewBody.text}}
+ <br><br>
+  <b>{{reviewList.[1].reviewBody.advantages.title}}:</b>
+  <br>
+  {{reviewList.[1].reviewBody.advantages.text}}
+   <br><br>
+   <b>{{reviewList.[1].reviewBody.disadvantages.title}}:</b>
+  <br>
+  {{reviewList.[1].reviewBody.disadvantages.text}}
+  <br><br>
+<img src={{reviewList.[1].reviewBody.images.[0]}}>
+  </div>
+</div>
+  <br>
+<div class="card col-11 mx-5">
+ <div class="card-body">
+    <h6 class="card-title">{{reviewList.[1].reviewBody.coments.[0].userName}}</h6>
+    {{reviewList.[1].reviewBody.coments.[0].date}}
+    <p>{{reviewList.[1].reviewBody.coments.[0].text}}</p>
+</div>
+</div>
+</div>
+</div>
+<br><br>
