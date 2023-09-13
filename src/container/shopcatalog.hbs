@@ -1,0 +1,191 @@
+{{#with navigation}}
+    <div class="nav">
+{{#each links}}
+  <div class="nav-item"></div>
+      <a href="{{href}}" class="nav-link">{{text}}</a>
+{{/each}}
+    </div>
+    {{/with}} 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+{{#each breadcrumb}}
+     <li class="breadcrumb-item"><a href={{url}}>{{name}}</a></li>
+  {{/each}}
+  </ol>
+</nav>
+<h2 class="title">{{header}}</h2>
+<br>
+    <div class="row">
+    <div class="col-3">
+<select class="form-select">
+  <option selected>{{sortBlock.[0].placeholder}}</option>
+  <option value={{sortBlock.[0].options.[0].value}}>{{sortBlock.[0].options.[0].text}}</option>
+  <option value={{sortBlock.[0].options.[1].value}}>{{sortBlock.[0].options.[1].text}}</option>
+</select>
+</div>
+<div class="col-3">
+<select class="form-select">
+  <option selected>{{sortBlock.[1].placeholder}}</option>
+  <option value={{sortBlock.[1].options.[0].value}}>{{sortBlock.[1].options.[0].text}}</option>
+  <option value={{sortBlock.[1].options.[1].value}}>{{sortBlock.[1].options.[1].text}}</option>
+</select>
+</div>
+<div class="col-3">
+<select class="form-select">
+  <option selected>{{sortBlock.[2].placeholder}}</option>
+  <option value={{sortBlock.[2].options.[0].value}}>{{sortBlock.[2].options.[0].text}}</option>
+  <option value={{sortBlock.[2].options.[1].value}}>{{sortBlock.[2].options.[1].text}}</option>
+</select>
+</div>
+</div>
+<br>
+
+
+
+
+
+
+
+      
+
+  <div class="row">
+    <div class="col-4"> 
+        <div class="card">
+        <div class="card-body">
+{{#with filterBlock}}  
+{{#with sellers}}
+{{title}}
+<div class="form-check">
+    {{#each list}}
+  <input class="form-check-input">
+  <label class="form-check-label">{{value}}</label>
+</div>
+{{/each}}
+{{/with}}
+{{#with brands}}
+{{title}}
+{{#with input}}
+<input class="form-control" type="text" placeholder="{{placeholder}}">
+{{/with}}
+    {{#each options}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{value}}</label>
+</div>
+{{/each}}
+{{/with}}
+{{#with price}}
+{{title}}
+{{#with range}}
+<input class="form-control" type="text" placeholder="{{from}}">
+<input class="form-control" type="text" placeholder="{{to}}">
+{{/with}}
+{{#with button}}
+<a href={{link}} class="btn btn-outline-secondary col-4">{{text}}</a>
+{{/with}}
+ {{/with}}
+{{filterList.[0].title}}
+<div class="form-check">
+  <input class="form-check-input">
+  <label class="form-check-label">{{filterList.[0].options.[0].value}}</label>
+</div>
+{{filterList.[1].title}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[1].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input">
+  <label class="form-check-label">{{filterList.[1].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[1].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[1].options.[3].value}}</label>
+</div>
+{{filterList.[2].title}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[3].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[4].value}}</label>
+</div>
+{{filterList.[3].title}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[3].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[4].value}}</label>
+</div>
+{{filterList.[4].title}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[3].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[4].value}}</label>
+</div>
+       {{/with}}
+      </div>
+        </div>
+        </div>
+<br>
+
+
+      <div class="col-4">
+ <div class="card">
+  {{#each goodsList}}
+  <img src="{{img}}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  {{/each}}
+</div>
+</div>
+</div>
