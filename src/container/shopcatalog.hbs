@@ -39,153 +39,26 @@
 </div>
 </div>
 <br>
-
-
-
-
-
-
-
-      
-
-  <div class="row">
-    <div class="col-4"> 
-        <div class="card">
-        <div class="card-body">
-{{#with filterBlock}}  
-{{#with sellers}}
-{{title}}
-<div class="form-check">
-    {{#each list}}
-  <input class="form-check-input">
-  <label class="form-check-label">{{value}}</label>
-</div>
-{{/each}}
-{{/with}}
-{{#with brands}}
-{{title}}
-{{#with input}}
-<input class="form-control" type="text" placeholder="{{placeholder}}">
-{{/with}}
-    {{#each options}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{value}}</label>
-</div>
-{{/each}}
-{{/with}}
-{{#with price}}
-{{title}}
-{{#with range}}
-<input class="form-control" type="text" placeholder="{{from}}">
-<input class="form-control" type="text" placeholder="{{to}}">
-{{/with}}
-{{#with button}}
-<a href={{link}} class="btn btn-outline-secondary col-4">{{text}}</a>
-{{/with}}
- {{/with}}
-{{filterList.[0].title}}
-<div class="form-check">
-  <input class="form-check-input">
-  <label class="form-check-label">{{filterList.[0].options.[0].value}}</label>
-</div>
-{{filterList.[1].title}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[1].options.[0].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input">
-  <label class="form-check-label">{{filterList.[1].options.[1].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[1].options.[2].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[1].options.[3].value}}</label>
-</div>
-{{filterList.[2].title}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[2].options.[0].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[2].options.[1].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[2].options.[2].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[2].options.[3].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[2].options.[4].value}}</label>
-</div>
-{{filterList.[3].title}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[3].options.[0].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[3].options.[1].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[3].options.[2].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[3].options.[3].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[3].options.[4].value}}</label>
-</div>
-{{filterList.[4].title}}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[4].options.[0].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[4].options.[1].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[4].options.[2].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[4].options.[3].value}}</label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox">
-  <label class="form-check-label">{{filterList.[4].options.[4].value}}</label>
-</div>
-       {{/with}}
-      </div>
-        </div>
-        </div>
+{{>catalogItem}}
 <br>
-
-
-      <div class="col-4">
- <div class="card">
-  {{#each goodsList}}
-  <img src="{{img}}" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+{{#with service}}
+<div class="card text-center text-bg-success mb-3">
+  <h2 class="card-header">{{title}}</h2>
+  <div class="card-body ">
+    <div class="card-title">{{description}}</div>
+    {{#each buttons}}
+   <a href="{{link}}" class="btn btn-primary">{{text}}</a>
   {{/each}}
+  </div>
 </div>
-</div>
+{{/with}}
+<br>
+<div class="nav">
+  {{#each footer}}
+  {{#each this}}
+  <div class="nav-item col-2 mx-2">
+    <div class="nav-link"><a href="{{link}}" class="btn-link">{{text}}</a></div>
+ </div>
+  {{/each}}
+  {{/each}}
 </div>

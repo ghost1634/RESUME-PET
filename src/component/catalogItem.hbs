@@ -1,0 +1,249 @@
+<div class="row">
+  <div class="col">
+
+        <div class="card p-3">
+        <div class="card-body">
+{{#with filterBlock}}  
+{{#with sellers}}
+{{title}}
+<div class="form-check">
+    {{#each list}}
+  <input class="form-check-input">
+  <label class="form-check-label">{{value}}</label>
+</div>
+{{/each}}
+{{/with}}
+<hr>
+{{#with brands}}
+<p>{{title}}</p>
+{{#with input}}
+<input class="form-control" type="text" placeholder="{{placeholder}}">
+{{/with}}
+    {{#each options}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{value}}</label>
+</div>
+{{/each}}
+{{/with}}
+<hr>
+{{#with price}}
+<p>{{title}}</p>
+{{#with range}}
+<input class="form-control" type="text" placeholder="{{from}}">
+<input class="form-control" type="text" placeholder="{{to}}">
+{{/with}}
+<p></p>
+{{#with button}}
+<a href={{link}} class="btn btn-outline-secondary col-4">{{text}}</a>
+{{/with}}
+ {{/with}}
+ <hr>
+<p>{{filterList.[0].title}}</p>
+<div class="form-check">
+  <input class="form-check-input">
+  <label class="form-check-label">{{filterList.[0].options.[0].value}}</label>
+</div>
+<hr>
+<p>{{filterList.[1].title}}</p>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[1].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input">
+  <label class="form-check-label">{{filterList.[1].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[1].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[1].options.[3].value}}</label>
+</div>
+<hr>
+<p>{{filterList.[2].title}}</p>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[3].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[2].options.[4].value}}</label>
+</div>
+<hr>
+<p>{{filterList.[3].title}}</p>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[3].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[3].options.[4].value}}</label>
+</div>
+<hr>
+<p>{{filterList.[4].title}}</p>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[0].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[1].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[2].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[3].value}}</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox">
+  <label class="form-check-label">{{filterList.[4].options.[4].value}}</label>
+</div>
+       {{/with}}
+      </div>
+        </div>
+<br>
+      <div class="col-4">
+ <div class="card">
+  <img src="{{goodsList.[0].img}}" class="card-img-top">
+  <div class="card-body">
+    {{#if goodsList.[0].isHot}}
+    <span class="badge text-bg-warning">HOT!</span>
+    {{#if goodsList.[0].isNew}}
+    <span class="badge text-bg-primary">Нове</span>
+    {{#if goodsList.[0].isFast}}
+    <span class="badge text-bg-success">Швидка доставка</span>
+     {{#if goodsList.[0].isFree}}
+    <span class="badge text-bg-secondary">Безкоштовна доставка</span>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+     {{/if}}
+     <p>
+    <h5 class="card-title">{{goodsList.[0].name}}</h5>
+    <p>{{goodsList.[0].review.amount}} {{goodsList.[0].review.text}}</p>
+    <h4 class="card-text">{{goodsList.[0].price}}</h4>
+    <p>{{goodsList.[0].delivery}}</p>
+    <a href="{{goodsList.[0].buttons.[0].link}}" class="btn btn-primary">{{goodsList.[0].buttons.[0].text}}</a>
+    <p></p>
+    <a href="{{goodsList.[0].buttons.[1].link}}" class="btn btn-secondary">{{goodsList.[0].buttons.[1].text}}</a>
+    <p></p>
+  <ul>
+     <li><p>{{goodsList.[0].characteristics.[0].title}}: {{goodsList.[0].characteristics.[0].value}}</p></li>
+     <li><p>{{goodsList.[0].characteristics.[1].title}}: {{goodsList.[0].characteristics.[1].value}}</p></li>
+     <li><p>{{goodsList.[0].characteristics.[2].title}}: {{goodsList.[0].characteristics.[2].value}}</p></li>
+     <li><p>{{goodsList.[0].characteristics.[3].title}}: {{goodsList.[0].characteristics.[3].value}}</p></li>
+  </ul>
+</div>
+</div>
+<br>
+ <div class="card">
+  <img src="{{goodsList.[1].img}}" class="card-img-top">
+  <div class="card-body">
+     {{#if goodsList.[1].isFree}}
+    <span class="badge text-bg-secondary">Безкоштовна доставка</span>
+    {{/if}}
+     <p><br>
+    <h5 class="card-title">{{goodsList.[1].name}}</h5>
+    <p>{{goodsList.[1].review.amount}} {{goodsList.[1].review.text}}</p>
+    <h4 class="card-text">{{goodsList.[1].price}}</h4>
+    <p>{{goodsList.[1].delivery}}</p>
+    <a href="{{goodsList.[1].buttons.[0].link}}" class="btn btn-primary">{{goodsList.[1].buttons.[0].text}}</a>
+    <p></p>
+    <a href="{{goodsList.[1].buttons.[1].link}}" class="btn btn-secondary">{{goodsList.[1].buttons.[1].text}}</a>
+    <p></p>
+  <ul>
+     <li><p>{{goodsList.[1].characteristics.[0].title}}: {{goodsList.[1].characteristics.[0].value}}</p></li>
+     <li><p>{{goodsList.[1].characteristics.[1].title}}: {{goodsList.[1].characteristics.[1].value}}</p></li>
+     <li><p>{{goodsList.[1].characteristics.[2].title}}: {{goodsList.[1].characteristics.[2].value}}</p></li>
+     <li><p>{{goodsList.[1].characteristics.[3].title}}: {{goodsList.[1].characteristics.[3].value}}</p></li>
+  </ul>
+</div>
+</div>
+</div>
+ <div class="col-4">
+ <div class="card">
+  <img src="{{goodsList.[2].img}}" class="card-img-top">
+  <div class="card-body">
+    {{#if goodsList.[2].isHot}}
+    <span class="badge text-bg-warning">HOT!</span>
+     {{#if goodsList.[2].isFree}}
+    <span class="badge text-bg-secondary">Безкоштовна доставка</span>
+    {{/if}}
+     {{/if}}
+     <br><br><P></P>
+    <h5 class="card-title">{{goodsList.[2].name}}</h5>
+    <p>{{goodsList.[2].review.amount}} {{goodsList.[2].review.text}}</p>
+    <h4 class="card-text">{{goodsList.[2].price}}</h4>
+    <p>{{goodsList.[2].delivery}}</p>
+    <a href="{{goodsList.[2].buttons.[0].link}}" class="btn btn-primary">{{goodsList.[2].buttons.[0].text}}</a>
+    <p></p>
+    <a href="{{goodsList.[2].buttons.[1].link}}" class="btn btn-secondary">{{goodsList.[2].buttons.[1].text}}</a>
+    <p></p>
+  <ul>
+     <li><p>{{goodsList.[2].characteristics.[0].title}}: {{goodsList.[2].characteristics.[0].value}}</p></li>
+     <li><p>{{goodsList.[2].characteristics.[1].title}}: {{goodsList.[2].characteristics.[1].value}}</p></li>
+     <li><p>{{goodsList.[2].characteristics.[2].title}}: {{goodsList.[2].characteristics.[2].value}}</p></li>
+     <li><p>{{goodsList.[2].characteristics.[3].title}}: {{goodsList.[2].characteristics.[3].value}}</p></li>
+  </ul>
+</div>
+</div>
+<br>
+ <div class="card">
+  <img src="{{goodsList.[3].img}}" class="card-img-top">
+  <div class="card-body">
+     {{#if goodsList.[3].isHot}}
+    <span class="badge text-bg-warning">HOT!</span>
+    <div>{{#if goodsList.[3].isFast}}</div>
+    <span class="badge text-bg-success">Швидка доставка</span>
+    {{/if}}
+     {{/if}}
+     <p>
+    <h5 class="card-title">{{goodsList.[3].name}}</h5>
+    <p>{{goodsList.[3].review.amount}} {{goodsList.[3].review.text}}</p>
+    <h4 class="card-text">{{goodsList.[3].price}}</h4>
+    <p>{{goodsList.[3].delivery}}</p>
+    <a href="{{goodsList.[3].buttons.[0].link}}" class="btn btn-primary">{{goodsList.[3].buttons.[0].text}}</a>
+    <p></p>
+    <a href="{{goodsList.[3].buttons.[1].link}}" class="btn btn-secondary">{{goodsList.[3].buttons.[1].text}}</a>
+    <p></p>
+  <ul>
+     <li><p>{{goodsList.[3].characteristics.[0].title}}: {{goodsList.[3].characteristics.[0].value}}</p></li>
+     <li><p>{{goodsList.[3].characteristics.[1].title}}: {{goodsList.[3].characteristics.[1].value}}</p></li>
+     <li><p>{{goodsList.[3].characteristics.[2].title}}: {{goodsList.[3].characteristics.[2].value}}</p></li>
+     <li><p>{{goodsList.[3].characteristics.[3].title}}: {{goodsList.[3].characteristics.[3].value}}</p></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
